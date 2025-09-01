@@ -1,0 +1,332 @@
+/* ===== MEDIA QUERIES - TABLET ===== */
+@media (min-width: 768px) {
+
+    /* === HEADER E NAVEGAÇÃO === */
+    .menu-toggle {
+        display: none;
+    }
+
+    .aside-overlay,
+    .sidebar {
+        display: none;
+    }
+
+    .nav {
+        display: block;
+        justify-self: end;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .header-container {
+        grid-template-columns: auto 1fr;
+        gap: 4rem;
+    }
+
+    .header-logo {
+        justify-self: start;
+    }
+
+    /* === FORMULÁRIOS === */
+    .login-form-wrapper {
+        padding: 4rem 3rem;
+    }
+
+    .login-title {
+        font-size: 2.8rem;
+    }
+
+    /* === DASHBOARD === */
+    .main--dashboard {
+        padding: 3rem 2rem;
+    }
+
+    .dashboard-container {
+        max-width: 100rem;
+        gap: 4rem;
+    }
+
+    .dashboard-title {
+        font-size: 3.2rem;
+    }
+
+    .main-metric {
+        padding: 4rem 3rem;
+    }
+
+    .main-metric-value {
+        font-size: 4.2rem;
+    }
+
+    .chart-container {
+        padding: 4rem 3rem;
+    }
+
+    .chart-wrapper {
+        height: 35rem;
+    }
+
+    /* === BOTÕES DE AÇÃO (DASHBOARD) === */
+    .action-buttons {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .action-btn {
+        min-width: 10rem;
+        max-width: 12rem;
+        padding: 1rem 1.5rem;
+        font-size: 1.2rem;
+        height: auto;
+        display: inline-block;
+        vertical-align: initial;
+    }
+
+    .action-btn:first-child {
+        min-width: 13rem;
+        max-width: 15rem;
+    }
+
+    /* === RELATÓRIOS === */
+    .main--reports {
+        padding: 3rem 2rem;
+    }
+
+    .reports-header-content {
+        gap: 1.5rem;
+    }
+
+    .reports-title {
+        font-size: 3.2rem;
+        margin-left: 1rem;
+    }
+
+    /* MOSTRAR TODAS AS COLUNAS NO TABLET+ */
+    .table-th:nth-child(3),
+    .table-th:nth-child(4),
+    .table-th:nth-child(5),
+    .table-td:nth-child(3),
+    .table-td:nth-child(4),
+    .table-td:nth-child(5) {
+        display: table-cell;
+    }
+
+    /* Reset das larguras específicas */
+    .table-th,
+    .table-td {
+        width: auto;
+        min-width: auto;
+        padding: 1.5rem 1rem;
+        font-size: 1.4rem;
+    }
+
+    /* === BOTÃO DE VOLTAR === */
+    .back-btn {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .back-btn-icon {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    /* === COMPONENTES === */
+    .status {
+        font-size: 1.2rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .btn-action {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.2rem;
+        min-width: 8rem;
+    }
+
+    /* === USUÁRIOS - TABLET === */
+    .main--users {
+        padding: 3rem 2rem;
+    }
+
+    .users-header-content {
+        gap: 1.5rem;
+    }
+
+    .users-title {
+        font-size: 3.2rem;
+    }
+
+    .users-subtitle {
+        font-size: 1.4rem;
+    }
+
+    /* MOSTRAR TODAS AS COLUNAS NO TABLET+ */
+    .users-table .table-th:nth-child(2),
+    .users-table .table-td:nth-child(2) {
+        display: table-cell;
+    }
+
+    /* Reset das larguras específicas */
+    .users-table .table-th,
+    .users-table .table-td {
+        width: auto;
+        min-width: auto;
+        padding: 1.5rem 1rem;
+        font-size: 1.4rem;
+    }
+
+    /* Componentes tablet */
+    .user-role {
+        font-size: 1.2rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .status {
+        font-size: 1.2rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .btn-action {
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem;
+        min-width: 7rem;
+    }
+
+    .action-buttons-group {
+        gap: 0.5rem;
+        flex-direction: row;
+    }
+
+    .search-container {
+        margin-bottom: 3rem;
+    }
+
+    .search-wrapper {
+        width: 100%;
+        /* Acompanha largura da tabela */
+        max-width: none;
+    }
+
+    .search-input {
+        padding: 1.2rem 1.5rem 1.2rem 4.5rem;
+        font-size: 1.4rem;
+    }
+
+    .search-icon {
+        width: 1.8rem;
+        height: 1.8rem;
+        left: 1.5rem;
+    }
+
+    /* === FOOTER === */
+    .footer-links {
+        gap: 5rem;
+    }
+
+    .social-links {
+        gap: 2rem;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    .main--denuncias {
+        padding: 3rem 2rem;
+    }
+
+    .denuncias-header-content {
+        gap: 1.5rem;
+    }
+
+    .denuncias-title {
+        font-size: 3.2rem;
+    }
+
+    /* MOSTRAR TODAS AS COLUNAS NO TABLET+ */
+    .denuncias-th--viagem,
+    .denuncias-th--reportador,
+    .denuncias-th--reportado,
+    .denuncias-th--motivo,
+    .denuncias-td--viagem,
+    .denuncias-td--reportador,
+    .denuncias-td--reportado,
+    .denuncias-td--motivo {
+        display: table-cell;
+    }
+
+    /* Reset das larguras específicas */
+    .denuncias-th,
+    .denuncias-td {
+        width: auto;
+        min-width: auto;
+        padding: 1.5rem 1rem;
+        font-size: 1.4rem;
+    }
+
+    .denuncias-actions-group .btn-action {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.2rem;
+        min-width: 8rem;
+    }
+
+    .denuncias-actions-group .status {
+        font-size: 1.2rem;
+        padding: 0.4rem 1rem;
+    }
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* ===== COMPONENTES DE MODAL - REUTILIZÁVEIS (na parte de gerenciar usuarios,no menu de edicao) ===== */
+
+     .edit-user-modal {
+        max-width: 55rem;
+    }
+
+    .edit-user-header {
+        padding: 2.5rem 3rem;
+    }
+
+    .edit-user-title {
+        font-size: 2.4rem;
+    }
+
+    .edit-user-close {
+        font-size: 3.2rem;
+    }
+
+    .edit-user-content {
+        padding: 3rem;
+        gap: 2.5rem;
+    }
+
+    .edit-field-label {
+        font-size: 1.5rem;
+    }
+
+    .edit-field-input,
+    .edit-field-select {
+        padding: 1.4rem 1.8rem;
+        font-size: 1.5rem;
+    }
+
+    .edit-user-actions {
+        padding: 2.5rem 3rem;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .btn-edit-cancel,
+    .btn-edit-save {
+        width: auto;
+        padding: 1.3rem 2.8rem;
+        font-size: 1.5rem;
+        min-width: 14rem;
+    }
+
+}
