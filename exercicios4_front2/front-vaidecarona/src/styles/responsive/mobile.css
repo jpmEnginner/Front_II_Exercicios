@@ -1,0 +1,532 @@
+/* ===== MEDIA QUERIES - MOBILE ===== */
+
+
+@media (max-width: 767px) {
+
+    /* === HEADER E NAVEGAÇÃO === */
+    .menu-toggle {
+        display: flex;
+        padding: 0.5rem;
+    }
+
+    .menu-toggle span {
+        width: 2rem;
+        height: 0.25rem;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .header-container {
+        grid-template-columns: 1fr auto;
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+        gap: 1rem;
+    }
+
+    .header-logo {
+        justify-self: start;
+    }
+
+    .header-logo-image {
+        height: 4rem;
+    }
+
+    /* === USUÁRIOS - MOBILE (CORRIGIDO) === */
+    .main--users {
+        padding: 1rem;
+    }
+
+    .users-header-content {
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .users-title {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .users-subtitle {
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+
+    .search-container {
+        margin-bottom: 2rem;
+    }
+
+    .search-wrapper {
+        width: 100%;
+        max-width: none;
+    }
+
+    .search-input {
+        padding: 1rem 1.2rem 1rem 4rem;
+        font-size: 1.3rem;
+    }
+
+    .search-icon {
+        width: 1.6rem;
+        height: 1.6rem;
+        left: 1.2rem;
+    }
+
+    .users-table-container {
+        margin: 0 -0.5rem;
+        border-radius: 0.8rem;
+        overflow-x: auto;
+    }
+
+    .users-table {
+        font-size: 1.2rem;
+        min-width: 100%;
+    }
+
+    /* ESCONDER COLUNAS EMAIL (2ª) E STATUS (4ª) NO MOBILE */
+    .users-table .table-th:nth-child(2), /* Email */
+    .users-table .table-th:nth-child(4), /* Status */
+    .users-table .table-td:nth-child(2), /* Email */
+    .users-table .table-td:nth-child(4)  /* Status */ {
+        display: none;
+    }
+
+    /* AJUSTAR LARGURAS DAS COLUNAS RESTANTES */
+    .users-table .table-th,
+    .users-table .table-td {
+        padding: 1rem 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    /* Nome (1ª coluna) */
+    .users-table .table-th:nth-child(1),
+    .users-table .table-td:nth-child(1) {
+        width: 40%;
+        min-width: 10rem;
+        text-align: left;
+    }
+
+    /* Função (3ª coluna) - ALINHAMENTO CORRIGIDO */
+    .users-table .table-th:nth-child(3),
+    .users-table .table-td:nth-child(3) {
+        width: 30%;
+        min-width: 8rem;
+        text-align: center !important;
+        vertical-align: middle;
+    }
+
+    /* Ações (5ª coluna) */
+    .users-table .table-th:nth-child(5),
+    .users-table .table-td:nth-child(5) {
+        width: 30%;
+        min-width: 12rem;
+        text-align: center !important;
+        vertical-align: middle;
+    }
+
+    /* COMPONENTES MOBILE - CENTRALIZAÇÃO DA FUNÇÃO */
+    .user-role {
+        font-size: 1rem;
+        padding: 0.3rem 0.8rem;
+        white-space: nowrap;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .btn-action {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+        min-width: 5rem;
+        border-radius: 0.4rem;
+        white-space: nowrap;
+    }
+
+    .action-buttons-group {
+        gap: 0.4rem;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    /* === BOTÃO DE VOLTAR === */
+    .back-btn {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .back-btn-icon {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    /* === DASHBOARD === */
+    .main--dashboard {
+        min-height: auto;
+        padding: 1rem;
+        align-items: stretch;
+    }
+
+    .dashboard-container {
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .dashboard-title {
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .main-metric {
+        padding: 2rem 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .main-metric-value {
+        font-size: 3rem;
+    }
+
+    .chart-container {
+        padding: 1.5rem 1rem;
+        margin-bottom: 0;
+    }
+
+    .chart-wrapper {
+        height: 25rem;
+        width: 100%;
+        position: relative;
+    }
+
+    .chart-wrapper canvas {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* === BOTÕES DE AÇÃO (DASHBOARD) === */
+    .action-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+        padding: 0 1rem;
+    }
+
+    .action-btn {
+        width: 14.5rem;
+        height: 6rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        line-height: 1.1;
+        text-align: center;
+        border-radius: 0.6rem;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .action-btn:first-child,
+    .action-btn:last-child {
+        width: 14.5rem;
+        min-width: 14.5rem;
+        max-width: 14.5rem;
+        height: 6rem;
+    }
+
+    /* === FOOTER === */
+    .footer {
+        margin-top: 2rem;
+        padding: 2rem 0 1rem;
+        min-height: auto;
+    }
+
+    .footer-container {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .footer-link {
+        font-size: 1.3rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .social-link {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .social-icon {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .copyright-text {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+     /* === DENÚNCIAS - MOBILE === */
+    .main--denuncias {
+        padding: 1rem;
+    }
+
+    .denuncias-header-content {
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .denuncias-title {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .denuncias-table-container {
+        margin: 0 -0.5rem;
+        border-radius: 0.8rem;
+        overflow-x: auto;
+    }
+
+    .denuncias-table {
+        font-size: 1.2rem;
+        min-width: 100%;
+    }
+
+    /* ESCONDER COLUNAS NO MOBILE - Manter apenas ID, Status e Ações */
+    .denuncias-th--viagem,     /* ID da Viagem (2ª) */
+    .denuncias-th--reportador, /* Reportador (3ª) */
+    .denuncias-th--reportado,  /* Usuário Reportado (4ª) */
+    .denuncias-th--motivo,     /* Motivo (5ª) */
+    .denuncias-td--viagem,
+    .denuncias-td--reportador,
+    .denuncias-td--reportado,
+    .denuncias-td--motivo {
+        display: none;
+    }
+
+    /* AJUSTAR LARGURAS DAS COLUNAS RESTANTES */
+    .denuncias-th,
+    .denuncias-td {
+        padding: 1rem 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    /* ID da Denúncia (1ª coluna) - ALINHAMENTO CORRIGIDO */
+    .denuncias-th--id,
+    .denuncias-td--id {
+        width: 35%;
+        min-width: 8rem;
+        text-align: center !important;
+        vertical-align: middle;
+    }
+
+    /* Status (6ª coluna) */
+    .denuncias-th--status,
+    .denuncias-td--status {
+        width: 30%;
+        min-width: 7rem;
+        text-align: center !important;
+        vertical-align: middle;
+    }
+
+    /* Ações (7ª coluna) */
+    .denuncias-th--acoes,
+    .denuncias-td--acoes {
+        width: 35%;
+        min-width: 10rem;
+        text-align: center !important;
+        vertical-align: middle;
+    }
+
+    /* COMPONENTES MOBILE - DENÚNCIAS */
+    .denuncias-actions-group {
+        gap: 0.4rem;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .denuncias-actions-group .btn-action {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+        min-width: 6rem;
+        border-radius: 0.4rem;
+        white-space: nowrap;
+    }
+
+    .denuncias-actions-group .status {
+        font-size: 1rem;
+        padding: 0.3rem 0.8rem;
+        white-space: nowrap;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    /* Adicione dentro de @media (max-width: 767px) */
+
+    /* === DETALHES DA DENÚNCIA - MOBILE === */
+    .main--denuncia-details {
+        padding: 1rem;
+    }
+
+    .denuncia-details-header-content {
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .denuncia-details-title {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .denuncia-details-card {
+        padding: 2rem 1.5rem;
+        gap: 2.5rem;
+        border-radius: 1rem;
+    }
+
+    .denuncia-section-title {
+        font-size: 1.6rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .denuncia-user-info {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+        gap: 1rem;
+    }
+
+    .user-avatar-img {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .denuncia-user-name {
+        font-size: 1.6rem;
+    }
+
+    .denuncia-user-id {
+        font-size: 1.3rem;
+    }
+
+    .denuncia-info-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .denuncia-info-item--full {
+        grid-column: 1;
+    }
+
+    .denuncia-info-label {
+        font-size: 1.2rem;
+    }
+
+    .denuncia-info-value {
+        font-size: 1.4rem;
+        padding: 1rem 1.2rem;
+    }
+
+    .denuncia-actions {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .btn-denuncia {
+        width: 100%;
+        min-width: auto;
+        padding: 1.5rem 2rem;
+        font-size: 1.3rem;
+    }
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* ===== COMPONENTES DE MODAL - REUTILIZÁVEIS (na parte de gerenciar usuarios,no menu de edicao) ===== */
+    .edit-user-modal {
+        width: 95%;
+        max-width: none;
+        margin: 1rem;
+        max-height: 95vh;
+    }
+
+    .edit-user-header {
+        padding: 1.5rem 2rem;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .edit-user-title {
+        font-size: 1.8rem;
+        order: 1;
+    }
+
+    .edit-user-close {
+        order: 2;
+        font-size: 2.5rem;
+        align-self: flex-end;
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+    }
+
+    .edit-user-content {
+        padding: 2rem 1.5rem;
+        gap: 2rem;
+    }
+
+    .edit-field-label {
+        font-size: 1.3rem;
+    }
+
+    .edit-field-input,
+    .edit-field-select {
+        padding: 1.5rem 1.2rem;
+        font-size: 1.4rem;
+    }
+
+    .edit-user-actions {
+        padding: 1.5rem 2rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-edit-cancel,
+    .btn-edit-save {
+        width: 100%;
+        padding: 1.5rem 2rem;
+        font-size: 1.3rem;
+        min-width: auto;
+    }
+
+    /* Ordem dos botões no mobile */
+    .btn-edit-save {
+        order: 1;
+    }
+
+    .btn-edit-cancel {
+        order: 2;
+    }
+
+    /* === AJUSTES GERAIS === */
+    body {
+        overflow-x: hidden;
+    }
+}

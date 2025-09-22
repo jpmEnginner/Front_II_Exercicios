@@ -1,0 +1,329 @@
+/* ===== MEDIA QUERIES - DESKTOP ===== */
+@media (min-width: 1024px) {
+
+    /* === HEADER === */
+    .header-container {
+        padding: 2rem;
+    }
+
+    .header-logo-image {
+        height: 6rem;
+    }
+
+    .nav-link {
+        font-size: 1.6rem;
+    }
+
+    .user-avatar {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    /* === FORMULÁRIOS === */
+    .form-logo-image {
+        height: 8rem;
+    }
+
+    .login-container {
+        max-width: 45rem;
+    }
+
+    .login-form-wrapper {
+        padding: 5rem 4rem;
+    }
+
+    .login-title {
+        font-size: 3.2rem;
+    }
+
+    /* === DASHBOARD === */
+    .main--dashboard {
+        padding: 4rem 2rem;
+    }
+
+    .dashboard-container {
+        max-width: 110rem;
+    }
+
+    .dashboard-title {
+        font-size: 3.6rem;
+    }
+
+    .main-metric {
+        padding: 5rem 4rem;
+    }
+
+    .main-metric-value {
+        font-size: 4.8rem;
+    }
+
+    .chart-container {
+        padding: 5rem 4rem;
+    }
+
+    .chart-wrapper {
+        height: 40rem;
+    }
+
+    /* === BOTÕES DE AÇÃO (DASHBOARD) === */
+    .action-btn {
+        min-width: 11rem;
+        max-width: 13rem;
+        padding: 1.1rem 1.6rem;
+        font-size: 1.3rem;
+    }
+
+    .action-btn:first-child {
+        min-width: 14rem;
+        max-width: 16rem;
+    }
+
+    /* === RELATÓRIOS === */
+    .main--reports {
+        padding: 4rem 2rem;
+    }
+
+    .reports-title {
+        font-size: 3.6rem;
+    }
+
+    .reports-table {
+        font-size: 1.5rem;
+    }
+
+    /* === BOTÃO DE VOLTAR === */
+    .back-btn {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .back-btn-icon {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    /* === COMPONENTES === */
+    .status {
+        font-size: 1.3rem;
+        padding: 0.5rem 1.2rem;
+    }
+
+    .btn-action {
+        font-size: 1.3rem;
+        padding: 0.7rem 1.4rem;
+        min-width: 9rem;
+    }
+
+    /* === USUÁRIOS - DESKTOP === */
+    .main--users {
+        padding: 4rem 2rem;
+    }
+
+    .users-title {
+        font-size: 3.6rem;
+    }
+
+    .users-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .users-table {
+        font-size: 1.5rem;
+    }
+
+    /* Componentes desktop */
+    .user-role {
+        font-size: 1.3rem;
+        padding: 0.5rem 1.2rem;
+    }
+
+    .status {
+        font-size: 1.3rem;
+        padding: 0.5rem 1.2rem;
+    }
+
+    .btn-action {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.2rem;
+        min-width: 8rem;
+    }
+
+    .action-buttons-group {
+        gap: 0.8rem;
+    }
+
+    /* === FOOTER === */
+    .footer-links {
+        gap: 6rem;
+    }
+
+    .social-links {
+        gap: 2.5rem;
+    }
+
+    .social-link {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .social-icon {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .search-container {
+        margin-bottom: 3rem;
+    }
+
+    .search-wrapper {
+        width: 100%;
+        /* Mesma largura da tabela */
+        max-width: none;
+        /* Remove qualquer limitação */
+    }
+
+    .search-input {
+        padding: 1.4rem 1.8rem 1.4rem 5rem;
+        font-size: 1.5rem;
+    }
+
+    .search-icon {
+        width: 2rem;
+        height: 2rem;
+        left: 1.8rem;
+    }
+
+    .main--denuncias {
+        padding: 4rem 2rem;
+    }
+
+    .denuncias-title {
+        font-size: 3.6rem;
+    }
+
+    .denuncias-table {
+        font-size: 1.5rem;
+    }
+
+    .denuncias-actions-group .btn-action {
+        font-size: 1.3rem;
+        padding: 0.7rem 1.4rem;
+        min-width: 9rem;
+    }
+
+    .denuncias-actions-group .status {
+        font-size: 1.3rem;
+        padding: 0.5rem 1.2rem;
+    }
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* ===== COMPONENTES DE MODAL - REUTILIZÁVEIS (na parte de gerenciar usuarios,no menu de edicao) ===== */
+    .edit-user-modal {
+        max-width: 60rem;
+    }
+
+    .edit-user-header {
+        padding: 3rem;
+    }
+
+    .edit-user-title {
+        font-size: 2.6rem;
+    }
+
+    .edit-user-close {
+        font-size: 3.5rem;
+    }
+
+    .edit-user-content {
+        padding: 4rem;
+        gap: 3rem;
+    }
+
+    .edit-field-label {
+        font-size: 1.6rem;
+    }
+
+    .edit-field-input,
+    .edit-field-select {
+        padding: 1.5rem 2rem;
+        font-size: 1.6rem;
+    }
+
+    .edit-user-actions {
+        padding: 3rem;
+    }
+
+    .btn-edit-cancel,
+    .btn-edit-save {
+        padding: 1.4rem 3rem;
+        font-size: 1.5rem;
+        min-width: 15rem;
+    }
+
+
+}
+
+/* ===== MEDIA QUERIES - TELAS GRANDES ===== */
+@media (min-width: 1200px) {
+
+    /* === HEADER === */
+    .header-container {
+        padding: 2.5rem;
+    }
+
+    /* === MAIN === */
+    .main {
+        padding: 6rem 2rem;
+    }
+
+    /* === FORMULÁRIOS === */
+    .login-container {
+        max-width: 50rem;
+    }
+
+    /* === DASHBOARD === */
+    .dashboard-container {
+        max-width: 120rem;
+    }
+
+    .chart-wrapper {
+        height: 45rem;
+    }
+
+    /* === BOTÕES DE AÇÃO (DASHBOARD) === */
+    .action-btn {
+        min-width: 12rem;
+        max-width: 14rem;
+        padding: 1.2rem 1.8rem;
+        font-size: 1.3rem;
+    }
+
+    .action-btn:first-child {
+        min-width: 15rem;
+        max-width: 17rem;
+    }
+
+    /* === FOOTER === */
+    .footer {
+        padding: 4rem 0 2rem;
+    }
+
+    .search-input {
+        padding: 1.5rem 2rem 1.5rem 5.5rem;
+        font-size: 1.6rem;
+    }
+
+    .search-icon {
+        width: 2.2rem;
+        height: 2.2rem;
+        left: 2rem;
+    }
+
+}
+
+
+
+
+
