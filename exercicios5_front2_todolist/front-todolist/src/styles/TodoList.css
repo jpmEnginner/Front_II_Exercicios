@@ -1,0 +1,19 @@
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vazio {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  font-size: 1.2rem;
+}
+
+.vazio p {
+  background: #f5f5f5;
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px dashed #ddd;
+}
