@@ -1,0 +1,87 @@
+/* ===== <footer> - REUSAVEL ===== */
+.footer {
+    background-color: #fff;
+    border-top: 0.1rem solid #e9ecef;
+    padding: 3rem 0;
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+}
+
+.footer-link {
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #007bff;
+}
+
+.footer-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.3rem rgba(0, 123, 255, 0.25);
+    border-radius: 0.4rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-0.2rem);
+}
+
+.social-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.3rem rgba(0, 123, 255, 0.25);
+    border-radius: 0.4rem;
+}
+
+.social-icon {
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+    opacity: 1;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.copyright-text {
+    color: #6c757d;
+    font-size: 1.3rem;
+}
