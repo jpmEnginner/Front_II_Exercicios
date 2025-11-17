@@ -1,0 +1,101 @@
+/* ===== <header> - REUTILIZÁVEL ===== */
+.header {
+    background-color: #fff;
+    box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.header-logo {
+    justify-self: start;
+}
+
+.header-logo-image {
+    height: 5rem;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.header-logo-image:hover {
+    transform: scale(1.05);
+}
+
+.nav {
+    justify-self: end;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #6c757d;
+    font-weight: 500;
+    font-size: 1.4rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.8rem;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.nav-link:hover {
+    color: #007bff;
+    background-color: #f8f9fa;
+}
+
+.nav-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.3rem rgba(0, 123, 255, 0.25);
+}
+
+.nav-link--primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.nav-link--primary:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* ===== PERFIL DO USUÁRIO - <header> ===== */
+.user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-avatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.2rem solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.user-avatar:hover {
+    border-color: #007bff;
+    transform: scale(1.05);
+}
