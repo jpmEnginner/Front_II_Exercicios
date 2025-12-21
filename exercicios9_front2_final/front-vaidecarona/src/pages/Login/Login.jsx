@@ -1,58 +1,52 @@
-import { useState } from 'react';
+import { useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { useAuthContext } from '../../contexts/AuthProvider';
 import '../../styles/index.css';
 
-const API_URL = import.meta.env.VITE_API_URL;
-
-function Login() {
-  const [email, setEmail]       = useState('');
-  const [password, setPassword] = useState('');
+export default function Login() {
+  const { login } = useAuthContext();
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
+
+  const onSubmit = async (e) => {
     e.preventDefault();
-    console.log('Login:', { email, password });
-    navigate('/admin', { replace: true });   // redireciona pós-login
+    try {
+      const usuario = await login(
+        emailRef.current.value,
+        passwordRef.current.value
+      );
+
+
+      if (usuario?.tipo_usuario === 'ADMINISTRADOR') {
+        navigate('/admin', { replace: true });
+      }
+
+      if (usuario?.tipo_usuario === 'MOTORISTA' || usuario?.tipo_usuario === 'PASSAGEIRO') {
+        navigate('/construcao', { replace: true });
+      }
+
+    } catch (err) {
+      alert(err.response?.data?.message || 'Credenciais inválidas');
+    }
   };
 
   return (
     <main className="main">
       <div className="login-container">
         <div className="login-form-wrapper">
-
           <div className="form-logo">
-            <img src="/assets/img/icone_vdc_meio.png"
-                 alt="VaiDeCarona"
-                 className="form-logo-image" />
+            <img src="/assets/img/icone_vdc_meio.png" alt="VaiDeCarona" className="form-logo-image" />
           </div>
 
-          <form className="login-form" onSubmit={handleSubmit}>
+          <form className="login-form" onSubmit={onSubmit}>
             <div className="input-group">
-              <input
-                type="email"
-                id="email"
-                className="form-input"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                autoComplete="email"
-              />
+              <input ref={emailRef} type="email" className="form-input" placeholder="Email" required />
             </div>
-
             <div className="input-group">
-              <input
-                type="password"
-                id="password"
-                className="form-input"
-                placeholder="Senha"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                autoComplete="current-password"
-              />
+              <input ref={passwordRef} type="password" className="form-input" placeholder="Senha" required />
             </div>
-
             <button type="submit" className="btn btn--primary">Entrar</button>
           </form>
 
@@ -62,11 +56,8 @@ function Login() {
               <Link to="/register" className="signup-link-text">Cadastre-se</Link>
             </p>
           </div>
-
         </div>
       </div>
     </main>
   );
 }
-
-export default Login;

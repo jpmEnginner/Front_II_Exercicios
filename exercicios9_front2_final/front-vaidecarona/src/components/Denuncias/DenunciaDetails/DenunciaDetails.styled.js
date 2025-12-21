@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 const tablet  = '@media (min-width:768px)';
 const desktop = '@media (min-width:1024px)';
 
+/* ---------- Layout geral ---------- */
 export const Main = styled.main`
   min-height: calc(100vh - 12rem);
   padding: 2rem;
@@ -33,6 +34,7 @@ export const Title = styled.h1`
   ${tablet}  { font-size: 3.2rem; }
 `;
 
+/* ---------- Botão voltar (opcional) ---------- */
 export const BackBtn = styled.button`
   width: 4rem;
   height: 4rem;
@@ -56,6 +58,7 @@ export const BackIcon = styled.img`
   opacity: .7;
 `;
 
+/* ---------- Cartão de detalhes ---------- */
 export const Card = styled.div`
   background: #fff;
   border-radius: 1.2rem;
@@ -81,6 +84,7 @@ export const SectionTitle = styled.h2`
   margin: 0;
 `;
 
+/* ---------- Usuário denunciado ---------- */
 export const UserInfo = styled.div`
   display: flex;
   gap: 1.5rem;
@@ -107,6 +111,7 @@ export const UserDetails = styled.div`
   gap: .5rem;
 `;
 
+/* ---------- Grid de dados ---------- */
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -141,6 +146,7 @@ export const Value = styled.span`
   border-left: .4rem solid #007bff;
 `;
 
+/* ---------- Área de ações ---------- */
 export const Actions = styled.div`
   display: flex;
   gap: 1.5rem;
@@ -148,6 +154,7 @@ export const Actions = styled.div`
   flex-wrap: wrap;
 `;
 
+/* ---------- Botões ---------- */
 const BaseBtn = styled.button`
   padding: 1.2rem 2.5rem;
   border-radius: .8rem;
@@ -159,16 +166,29 @@ const BaseBtn = styled.button`
   transition: all .3s ease;
   min-width: 15rem;
 
-  &:hover { transform: translateY(-.2rem); }
-  &:active{ transform: translateY(0);        }
-  &:focus { outline:none; box-shadow:0 0 0 .3rem rgba(0,123,255,.25); }
+  &:hover   { transform: translateY(-.2rem); }
+  &:active  { transform: translateY(0);      }
+  &:focus   { outline:none; box-shadow:0 0 0 .3rem rgba(0,123,255,.25); }
+
+  /* Visual e interação quando desabilitado */
+  &:disabled {
+    pointer-events: none;
+    transform: none;
+    opacity: 0.7;
+  }
 `;
 
+/* Botão verde / cinza dependendo de $done */
 export const ResolveBtn = styled(BaseBtn)`
-  background: #28a745;
-  &:hover { background:#1e7e34; }
+  background: ${({ $done }) => ($done ? '#9ca3af' : '#28a745')};
+  cursor:     ${({ $done }) => ($done ? 'not-allowed' : 'pointer')};
+
+  &:hover {
+    background: ${({ $done }) => ($done ? '#9ca3af' : '#1e7e34')};
+  }
 `;
 
+/* Botão vermelho permanece igual */
 export const DeleteBtn = styled(BaseBtn)`
   background: #dc3545;
   &:hover { background:#c82333; }
